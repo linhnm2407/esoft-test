@@ -6,11 +6,11 @@ terraform {
     }
   }
   required_version = ">=0.13.0"
-  # backend "s3" {
-  #   bucket         = "esoft-test-bucket"
-  #   key            = "state/terraform.tfstate"
-  #   region         = "ap-southeast-2"
-  #   encrypt        = true
-  #   dynamodb_table = "esoft-state-locking"
-  # }
+  backend "s3" {
+    bucket         = "esoft-test-bucket"
+    key            = "state/terraform.tfstate"
+    region         = "ap-southeast-2"
+    encrypt        = true
+    dynamodb_table = "esoft-state-locking"
+  }
 }
